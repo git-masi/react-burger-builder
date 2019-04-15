@@ -38,6 +38,19 @@
   background: #d22501;
 }
 
+.btn__less:hover {
+  background: #d22501aa;
+}
+
+.btn__less:disabled {
+  opacity: .7;
+  background: #666;
+}
+
 .btn__more {
   background: #91a61d;
+}
+
+.btn__more:hover {
+  background: #91a61daa;
 }
