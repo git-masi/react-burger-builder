@@ -4,9 +4,12 @@
   --bun-dark: #bd6f04;
   --bun-dark2: #764503;
   --meat1: #88472e;
+  --meat2: #bf3813;
+  --meat3: #c45e38;
   --tomato: #d22501;
   --cheese: #ffda01;
   --lettuce: #91a61d;
+  --lettuce2: #c2dc34;
   --off-white: #fdf3e6;
   --off-white-darken: #cac2b8;
 }
@@ -117,18 +120,34 @@
   border-radius: 0 0 2rem 2rem ;
 }
 
-.meat {
+.meat, .cheese, .lettuce, .bacon {
   margin: .2rem 0;
+}
+
+.meat {
   height: 4rem;
   width: 88%;
-  background: var(--meat1);
+  background: linear-gradient(3deg, var(--meat1) 65%, var(--meat2));
   border-radius: 5rem;
 }
 
 .cheese {
-  margin: .2rem 0;
   height: 1rem;
   width: 83%;
   background: var(--cheese);
+  border-radius: 5rem;
+}
+
+.lettuce {
+  height: 1.4rem;
+  width: 83%;
+  background: linear-gradient(to bottom left, var(--lettuce), var(--lettuce2));
+  border-radius: 5rem;
+}
+
+.bacon {
+  height: 1rem;
+  width: 83%;
+  background: linear-gradient(to bottom, var(--meat2), var(--meat3));
   border-radius: 5rem;
 }

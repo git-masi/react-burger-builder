@@ -6,17 +6,22 @@ const burger = props => {
   function makeArr(obj) {
     const objKeysArr = Object.keys(obj);
     const objValuesArr = Object.values(obj);
-    const ingredientsArr = [];
+    let ingredientsArr = [];
     objKeysArr.forEach((el, index) => {
       for (let i = 0; i < objValuesArr[index]; i++) {
         ingredientsArr.push(<BurgerIngredient type={el} key={el+i+Math.floor(Math.random() * 10000)}/>); 
       }
     });
+
+    if (ingredientsArr) ingredientsArr = <p>Let's add some ingredients!</p>;
+    
     return ingredientsArr;
   }
 
-  const transformedIngredients = makeArr(props.ingredientsQuant);
+  let transformedIngredients = makeArr(props.ingredientsQuant);
   
+  console.log(transformedIngredients);
+
   return (
     <div className={styles.burger}>
       <BurgerIngredient type="bread-top" />

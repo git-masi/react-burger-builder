@@ -1,0 +1,43 @@
+.controlComponent {
+  /* flex: 1; */
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controlComponent > * {
+  display: inline-block;
+  margin: 0 1rem;
+  flex: 1;
+  /* text-align: center; */
+  text-transform: capitalize;
+  line-height: 1.9rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.btn__less,
+.btn__more,
+.btn__less:focus,
+.btn__more:focus {
+  padding: 1rem 1.8rem;
+  cursor: pointer;
+  border: .1rem solid #333;
+  border-radius: 1rem;
+  outline:0;
+  color: #fff;
+}
+
+.btn__less {
+  background: #d22501;
+}
+
+.btn__more {
+  background: #91a61d;
+}
