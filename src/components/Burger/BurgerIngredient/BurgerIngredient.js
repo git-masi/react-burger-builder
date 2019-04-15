@@ -33,7 +33,7 @@ class BurgerIngredient extends Component {
         ingredient = <div className={styles.bacon}></div>;
         break;
       default:
-          ingredient = null;
+        ingredient = null;
     }
 
     return ingredient;
