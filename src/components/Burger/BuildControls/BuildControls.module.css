@@ -3,6 +3,31 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
   background: #f19f00;
+}
+
+.btn__build,
+.btn__build:focus {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 380px;
+  cursor: pointer;
+  border: .1rem solid transparent;
+  border-radius: .8rem;
+  outline:0;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: .2rem;
+  transition: all 280ms;
+}
+
+.btn__build:not(:disabled):hover {
+  border: .1rem solid black;
+  transform: scale(1.1);
+}
+
+.btn__build:disabled {
+  opacity: .7;
 }

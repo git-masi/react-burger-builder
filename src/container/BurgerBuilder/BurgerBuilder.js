@@ -18,7 +18,22 @@ class BurgerBuilder extends Component {
       cheese: 0,
       meat: 0
     },
-    totalPrice: 4
+    totalPrice: 4,
+    purchasable: false
+  }
+
+  updatePurchaseStateHandler = (ingredients) => {
+    const quant = ingredients;
+    let updatePurchase;
+    for (let key in quant) {
+      if (quant[key] !== 0) {
+        updatePurchase = true;
+        break
+      } else {
+        updatePurchase = false;
+      }
+    }
+    this.setState({purchasable: updatePurchase})
   }
 
   addIngredientHandler = (type) => {
@@ -34,9 +49,16 @@ class BurgerBuilder extends Component {
     const price = INGREDIENT_PRICES[type];
     const oldPrice = this.state.totalPrice;
     const updatePrice = oldPrice + price;
-
+    
     // set state
     this.setState({ingredientsQuant: updateIngredients, totalPrice: updatePrice});
+
+    // update purchase state
+    // this is a hack because the state is not being updated quickly enough
+    // I should probably be using something like component did mount though, idk
+    // setTimeout(this.updatePurchaseStateHandler,1)
+    // or pass the ingredients into the function
+    this.updatePurchaseStateHandler(updateIngredients);
   }
 
   removeIngredientHandler = (type) => {
@@ -57,6 +79,13 @@ class BurgerBuilder extends Component {
 
     // set state
     this.setState({ingredientsQuant: updateIngredients, totalPrice: updatePrice});
+
+    // update purchase state
+    // this is a hack because the state is not being updated quickly enough
+    // I should probably be using something like component did mount though, idk
+    // setTimeout(this.updatePurchaseStateHandler,1)
+    // or pass the ingredients into the function
+    this.updatePurchaseStateHandler(updateIngredients);
   }
 
   render () {
@@ -68,8 +97,6 @@ class BurgerBuilder extends Component {
       disabledInfo[key] = disabledInfo[key] <= 0;
     }
 
-    // console.log(disabledInfo);
-
     return (
       <Aux>
         <Burger ingredientsQuant = {this.state.ingredientsQuant}/>
@@ -77,6 +104,8 @@ class BurgerBuilder extends Component {
           disabled = {disabledInfo}
           ingredientAdded = {this.addIngredientHandler}
           ingredientremoved = {this.removeIngredientHandler}
+          totalPrice = {this.state.totalPrice}
+          purchasable = {this.state.purchasable}
           />
       </Aux>
     );
