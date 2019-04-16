@@ -10,7 +10,8 @@ const modal = props => {
   // }
 
   return (
-    <div className={styles.modal} style={{display: props.orderNow ? 'flex' : 'none'}}>
+    // <div className={styles.modal} style={{display: props.orderNow ? 'flex' : 'none'}}>
+    <div className={props.orderNow ? styles.modal : styles.displayNone}>
       {/* {displayOrderSummary} */}
       {props.children}
     </div>
