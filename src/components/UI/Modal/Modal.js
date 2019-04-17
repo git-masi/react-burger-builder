@@ -17,7 +17,7 @@ const modal = props => {
       <div className={props.orderNow ? styles.modal : styles.displayNone}>
         {/* {displayOrderSummary} */}
         {props.children}
-        <button>testing</button>
+        {/* <button onClick={props.closeModal}>Back To Order</button> */}
       </div>
       <Backdrop show={props.orderNow} closeModal={props.closeModal}/>
     </Aux>

@@ -25,6 +25,10 @@ class BurgerBuilder extends Component {
     orderNow: false
   }
 
+  continuePurchaseHandler = () => {
+    alert('Thank you for your order!');
+  }
+
   closeModalHandler = () => {
     this.setState({orderNow: false});
   }
@@ -118,7 +122,10 @@ class BurgerBuilder extends Component {
         <Modal orderNow = {this.state.orderNow} closeModal={this.closeModalHandler}>
           <OrderSummary 
             // orderNow={this.state.orderNow}
-            ingredients={this.state.ingredientsQuant}
+            price = {this.state.totalPrice}
+            continuePurchase = {this.continuePurchaseHandler}
+            cancelPurchase = {this.closeModalHandler}
+            ingredients = {this.state.ingredientsQuant}
           />
         </Modal>
         <BuildControls 

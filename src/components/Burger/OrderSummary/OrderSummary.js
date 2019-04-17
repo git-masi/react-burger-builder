@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './OrderSummary.module.css';
 import Aux from '../../../hoc/Auxiliary';
+import Button from '../../UI/Button/Button';
 
 const orderSummary = props => {
 
@@ -17,6 +18,10 @@ const orderSummary = props => {
       <ul className={styles.list}>
         {ingredientsList}
       </ul>
+      <p><strong>Total Price: {props.price.toFixed(2)}</strong></p>
+      <p>Continue to checkout</p>
+      <Button text="continue" clicked={props.continuePurchase}/>
+      <Button text="cancel" clicked={props.cancelPurchase}/>
     </Aux>
   )
 }

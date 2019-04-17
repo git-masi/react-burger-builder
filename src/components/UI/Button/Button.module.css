@@ -1,0 +1,25 @@
+.continue,
+.cancel,
+.continue:focus,
+.cancel:focus {
+  width: 100%;
+  max-width: 200px;
+  margin: .5rem 0;
+  padding: 1rem 0;
+
+  text-transform: capitalize;
+  cursor: pointer;
+  border: .1rem solid black;
+  border-radius: .8rem;
+  outline: 0;
+  color: white;
+  font-size: inherit;
+}
+
+.continue {
+  background: #91a61d;
+}
+
+.cancel {
+  background: #d22501;
+}
