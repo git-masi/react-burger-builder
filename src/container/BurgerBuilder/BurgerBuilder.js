@@ -25,6 +25,10 @@ class BurgerBuilder extends Component {
     orderNow: false
   }
 
+  closeModalHandler = () => {
+    this.setState({orderNow: false});
+  }
+
   orderButtonHandler = () => {
     // const orderNowState = this.state.orderNow;
     // const updateOrderNow = !orderNowState;
@@ -94,6 +98,7 @@ class BurgerBuilder extends Component {
     // this is a hack because the state is not being updated quickly enough
     // I should probably be using something like component did mount though, idk
     // setTimeout(this.updatePurchaseStateHandler,1)
+
     // or pass the ingredients into the function
     this.updatePurchaseStateHandler(updateIngredients);
   }
@@ -110,7 +115,7 @@ class BurgerBuilder extends Component {
     return (
       <Aux>
         <Burger ingredientsQuant = {this.state.ingredientsQuant}/>
-        <Modal orderNow = {this.state.orderNow}>
+        <Modal orderNow = {this.state.orderNow} closeModal={this.closeModalHandler}>
           <OrderSummary 
             // orderNow={this.state.orderNow}
             ingredients={this.state.ingredientsQuant}

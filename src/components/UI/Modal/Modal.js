@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Modal.module.css';
+import Backdrop from '../Backdrop/Backdrop';
+import Aux from '../../../hoc/Auxiliary';
 
 const modal = props => {
   // let setStyles = [];
@@ -11,10 +13,14 @@ const modal = props => {
 
   return (
     // <div className={styles.modal} style={{display: props.orderNow ? 'flex' : 'none'}}>
-    <div className={props.orderNow ? styles.modal : styles.displayNone}>
-      {/* {displayOrderSummary} */}
-      {props.children}
-    </div>
+    <Aux>
+      <div className={props.orderNow ? styles.modal : styles.displayNone}>
+        {/* {displayOrderSummary} */}
+        {props.children}
+        <button>testing</button>
+      </div>
+      <Backdrop show={props.orderNow} closeModal={props.closeModal}/>
+    </Aux>
   )
 }
 
