@@ -14,14 +14,14 @@
   line-height: var(--nav-height);
   text-decoration: none;
   text-align: center;
-  color: #fdf3e6;
-  background: #f19f0044;
+  color: #301f00;
+  background: #ffbe3f;
   border-bottom: .4rem solid transparent;
 }
 
 .NavigationItems a:hover,
 .NavigationItems .Current {
-  background: #f19f0088;
+  background: #ffbe3faa;
   border-bottom: .4rem solid #34c2dc;
 }
 
