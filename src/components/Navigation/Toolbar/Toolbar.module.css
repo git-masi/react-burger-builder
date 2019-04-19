@@ -1,0 +1,18 @@
+.Toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 calc(var(--nav-height) / 3);
+  height: var(--nav-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 11;
+
+  background: #764503;
+}
+
+.Toolbar nav {
+  height: 100%;
+}

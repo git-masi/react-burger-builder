@@ -4,6 +4,10 @@ html {
   font-size: 62.5%;
 }
 
+:root {
+  --nav-height: 5rem;
+}
+
 html,
 body {
   height: 100%;

@@ -1,6 +1,6 @@
 .content {
   position: relative;
-  margin-top: 1.6rem;
+  margin-top: calc(var(--nav-height) + 1.6rem);
 }
 
 /* .red {

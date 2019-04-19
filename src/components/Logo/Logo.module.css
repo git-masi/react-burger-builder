@@ -1,0 +1,14 @@
+.LogoWrapper {
+  height: calc(var(--nav-height) - .9rem);
+  width: var(--nav-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fdf3e6;
+  border-radius: .4rem;
+}
+
+.LogoWrapper img {
+  width: 100%;
+}
