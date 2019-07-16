@@ -16,7 +16,7 @@
   background: darksalmon;
   border: .1rem solid #333;
   /* box-shadow: 0 .5rem .8rem #00000077; */
-  box-shadow: 0 0 0 15rem rgba(0,0,0,.7);
+  /* box-shadow: 0 0 0 15rem rgba(0,0,0,.7); */
   
   transition: all 300ms ease-out;
   animation: show-modal 1000ms ease-in-out forwards;
