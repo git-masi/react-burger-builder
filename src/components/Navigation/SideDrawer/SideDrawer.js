@@ -13,6 +13,9 @@ const sideDrawer = props => {
     <Aux>
       <Backdrop show={props.show} closeModal={props.showSideDrawerHandler}/>
       <div className={drawerClasses.join(' ')}>
+        <div className={styles.closeBtnContainer}>
+          <div className={styles.closeBtn} onClick={props.showSideDrawerHandler}></div>
+        </div>
         <Logo/>
         <NavigationItems/>
       </div>
