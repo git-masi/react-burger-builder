@@ -17,8 +17,28 @@
   height: 100%;
 }
 
+.menu {
+  padding: .7rem;
+  display: none;
+
+  color: antiquewhite;
+  border: 2px solid transparent;
+  border-radius: .5rem;
+
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.menu:hover {
+  border: 2px solid antiquewhite;
+}
+
 @media screen and (max-width: 499px) {
-  .Toolbar {
+  .menu {
+    display: block;
+  }
+
+  .Toolbar > *:not(.menu) {
     display: none;
   }
 }

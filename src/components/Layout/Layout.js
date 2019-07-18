@@ -17,7 +17,7 @@ class Layout extends Component {
   render () {
     return (
       <Aux>
-        <Toolbar/>
+        <Toolbar click={this.showSideDrawerHandler}/>
         <SideDrawer show={this.state.show} showSideDrawerHandler={this.showSideDrawerHandler}/>
         {/* <main className={`${styles.content} ${styles.red}`}> */}
         <main className={styles.content}>
