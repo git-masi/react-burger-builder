@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// could also use fragments here
+// could also use Fragment here
 import Aux from '../../hoc/Auxiliary';
 import styles from './Layout.module.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
