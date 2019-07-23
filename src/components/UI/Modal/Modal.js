@@ -6,24 +6,14 @@ import Aux from '../../../hoc/Auxiliary';
 class Modal extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.orderNow !== this.props.orderNow;
+    return nextProps.orderNow !== this.props.orderNow || nextProps.children !== this.props.children;
   }
-
-  // let setStyles = [];
-  // props.orderNow ? setStyles = [`${styles.modal}`] : setStyles = [`${styles.modal}`,`${styles.displayNone}`];
-
-  // const displayOrderSummary = () => {
-  //   if (props.orderNow) return `${props.children}`;
-  // }
 
   render() {
     return (
-      // <div className={styles.modal} style={{display: props.orderNow ? 'flex' : 'none'}}>
       <Aux>
         <div className={this.props.orderNow ? styles.modal : styles.displayNone}>
-          {/* {displayOrderSummary} */}
           {this.props.children}
-          {/* <button onClick={props.closeModal}>Back To Order</button> */}
         </div>
         <Backdrop show={this.props.orderNow} closeModal={this.props.closeModal}/>
       </Aux>
